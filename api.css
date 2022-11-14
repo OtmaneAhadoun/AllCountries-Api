@@ -1,0 +1,102 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100;200;300;400;500;800&family=Poppins:ital,wght@0,700;0,800;1,800&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Outfit';
+}
+body{
+    width: 100%;
+    min-height: 100vh;
+}
+body div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    overflow: hidden;
+}
+.box{
+    width: 400px;
+    height: 250px;
+    border: 2px solid white;
+    margin: 40px;
+    border-radius: 4px;
+    box-shadow: rgba(0, 0, 0, 0.15) 2.4px 2.4px 3.2px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    position: relative;
+    transition: 0.5s ease;
+    overflow: hidden;
+    justify-content: space-evenly;
+}
+.box img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    z-index: -1;
+}
+.box h1{
+    color: transparent;
+    z-index: 11;
+    transition: 0.5s;
+    font-size: 43px;
+    font-family: 900;
+}
+.box:hover{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.box:hover h1,.box:hover p,.box:hover .peaple small,.box:hover .peaple i{
+    color: white;
+}
+.box p{
+    color: transparent;
+    transition: 0.5s ease;
+    font-size: 29px;
+    font-weight: 500;
+}
+.peaple{
+    position: absolute;
+    bottom: 10px;
+    left: 0;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 7px;
+}
+.peaple .group small{
+    font-size: 22px;
+    color: transparent;
+    margin-right: 5px;
+    transition: 0.4s ease;
+}
+.peaple .group{
+    display: flex;
+    align-items: center;
+}
+.peaple .group i{
+    font-size: 22px;
+    color: transparent;
+    transition: 0.4s ease;
+}
+
+.slide{
+    animation: slide 1s ease-in-out;
+}
+@keyframes slide {
+    from{
+        transform: translateX(300px);
+        opacity: 0;
+    }to{
+        transform: translateX(0px);
+        opacity: 1;
+    }
+}
